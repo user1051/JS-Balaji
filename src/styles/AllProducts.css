@@ -1,0 +1,143 @@
+/* src/styles/AllProducts.css */
+.all-products-section {
+	padding: 50px;
+	background-color: #f8f9fa;
+	text-align: center;
+}
+
+.all-products-section h2 {
+	font-size: 36px;
+	color: #e60000; /* Red heading */
+	margin-bottom: 40px;
+}
+
+.category-section {
+	margin-bottom: 50px;
+}
+
+.category-section h3 {
+	font-size: 28px;
+	color: #e60000; /* Red category */
+	margin-bottom: 20px;
+}
+
+.products-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.product-card {
+	background-color: white;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	/* text-align: center; */
+	height: auto;
+}
+
+.product-image {
+	width: 100%;
+	/* height: 70%; */
+	object-fit: contain;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.product-details {
+	width: 100%;
+}
+.product-card h4 {
+	font-size: 18px;
+	color: #e60000; /* Red category */
+	margin-bottom: 5px;
+}
+
+.product-card p {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000000; /* Black name */
+	margin-bottom: 10px;
+}
+
+.product-card ul {
+	list-style-type: none;
+	padding: 0;
+	text-align: left;
+}
+
+.product-card li {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.all-products-section {
+		padding: 30px;
+	}
+
+	.all-products-section h2 {
+		font-size: 28px;
+	}
+
+	.category-section h3 {
+		font-size: 24px;
+	}
+
+	.products-grid {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 15px;
+	}
+
+	.product-image {
+		height: 120px;
+	}
+
+	.product-card h4 {
+		font-size: 16px;
+	}
+
+	.product-card p {
+		font-size: 14px;
+	}
+
+	.product-card li {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.all-products-section {
+		padding: 20px;
+	}
+
+	.all-products-section h2 {
+		font-size: 24px;
+	}
+
+	.category-section h3 {
+		font-size: 20px;
+	}
+
+	.products-grid {
+		grid-template-columns: 1fr; /* Single column on mobile */
+		gap: 10px;
+	}
+
+	.product-image {
+		height: 100px;
+	}
+
+	.product-card h4 {
+		font-size: 14px;
+	}
+
+	.product-card p {
+		font-size: 12px;
+	}
+
+	.product-card li {
+		font-size: 10px;
+	}
+}

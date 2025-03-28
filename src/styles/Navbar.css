@@ -1,0 +1,147 @@
+/* src/styles/Navbar.css */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 50px;
+	/* background-color: #e60000;  */
+	background: linear-gradient(
+		90deg,
+		rgba(230, 0, 0, 0.8),
+		rgba(230, 0, 0, 0.5)
+	);
+	backdrop-filter: blur(6px); /* Blur effect */
+	-webkit-backdrop-filter: blur(6px); /* For Safari support */
+	position: sticky;
+	top: 20px;
+	z-index: 1000;
+	margin: 0 80px;
+	border-radius: 15px;
+}
+
+.navbar-logo h2 {
+	color: white;
+	margin: 0;
+	font-size: 24px;
+}
+
+.navbar-links {
+	display: flex;
+	gap: 30px;
+}
+
+.navbar-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.navbar-links a.active {
+	color: #000000; /* Black for active link */
+	font-weight: 700;
+}
+
+.navbar-get-in-touch {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.navbar-get-in-touch.active {
+	color: #000000;
+}
+
+.navbar-toggle {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.bar {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	border-radius: 2px;
+	transition: all 0.5s ease;
+}
+/* Hamburger to Cross Animation */
+.navbar-toggle.open .bar:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.open .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.navbar-toggle.open .bar:nth-child(3) {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.navbar-toggle.open .bar:nth-child(2) {
+	animation: fadeOut 0.3s ease forwards;
+}
+/* Responsive Styles */
+@media (max-width: 997px) {
+	.navbar {
+		padding: 15px 20px;
+		flex-wrap: wrap;
+		border-radius: 10px;
+		margin: 5px;
+	}
+
+	.navbar-logo h2 {
+		font-size: 20px;
+	}
+
+	.navbar-toggle {
+		display: flex;
+	}
+
+	.navbar-links {
+		display: none;
+		flex-direction: column;
+		gap: 15px;
+		width: 100%;
+		padding: 15px 0;
+		/* background-color: #e60000; */
+		/* background: linear-gradient(
+			90deg,
+			rgba(230, 0, 0, 0.8),
+			rgba(230, 0, 0, 0.5)
+		);
+		backdrop-filter: blur(10px); 
+		-webkit-backdrop-filter: blur(10px);  */
+		text-align: center;
+	}
+
+	.navbar-links.active {
+		display: flex;
+	}
+
+	.navbar-get-in-touch {
+		display: none; /* Hide on mobile, can show in menu if needed */
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar {
+		padding: 10px 15px;
+	}
+
+	.navbar-logo h2 {
+		font-size: 18px;
+	}
+}
