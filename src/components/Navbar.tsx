@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 					About
 				</NavLink>
 				<NavLink
-					to="/products"
+					to="/all-products"
 					className={({ isActive }) => (isActive ? "active" : "")}
 					onClick={toggleMenu}
 				>

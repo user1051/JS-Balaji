@@ -84,11 +84,6 @@ const ProductsSection: React.FC = () => {
 								style={{ width: "70%", height: "70%" }}
 							/>
 							<h4>{product.name}</h4>
-							{/* <ul>
-								{product.details.map((detail, idx) => (
-									<li key={idx}>{detail}</li>
-								))}
-							</ul> */}
 						</div>
 					</div>
 				))}

@@ -1,15 +1,12 @@
-/* src/styles/HeroSection.css */
+/* src/styles/Hero.css */
 .hero-section {
-	position: relative;
-	height: 80vh;
-	background-size: cover;
-	background-position: center;
+	min-height: 100vh;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	padding: 0 50px;
-	color: white;
-	margin-top: -120px; /* Navbar ke margin aur padding ke hisaab se adjust */
-	padding-top: 120px; /* Navbar ke height ke liye space */
+	background: url("../assets/images/hero.png") no-repeat center center/cover;
+	position: relative;
+	padding: 0 20px;
 }
 
 .hero-section::before {
@@ -19,83 +16,89 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Black overlay for readability */
+	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 1;
 }
 
 .hero-content {
 	position: relative;
 	z-index: 2;
-	max-width: 600px;
+	text-align: center;
+	color: var(--white);
+	max-width: 800px;
 }
 
 .hero-content h1 {
 	font-size: 48px;
 	font-weight: 700;
 	margin-bottom: 20px;
-	color: white;
+	color: var(--white);
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
-	font-size: 18px;
+	font-size: 20px;
+	font-weight: 300;
 	margin-bottom: 30px;
-	line-height: 1.5;
-	color: white;
+	color: var(--white);
 }
 
-.hero-button {
+.hero-cta {
 	display: inline-block;
 	padding: 15px 30px;
-	background-color: #e60000; /* Red button */
-	color: white;
-	text-decoration: none;
+	background-color: var(--primary-color);
+	color: var(--white);
 	font-size: 16px;
 	font-weight: 500;
-	border-radius: 5px;
-	text-transform: uppercase;
+	border-radius: 25px;
+	transition: all 0.3s ease;
 }
 
-.hero-button:hover {
-	background-color: #c40000; /* Slightly darker red on hover */
+.hero-cta:hover {
+	background-color: #c40000;
+	transform: translateY(-3px);
+	box-shadow: var(--shadow);
+}
+.hero-content {
+	animation: fadeIn 1s ease-in-out;
 }
 
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
-	.hero-section {
-		height: 60vh;
-		padding: 0 30px;
-	}
-
 	.hero-content h1 {
 		font-size: 36px;
 	}
 
 	.hero-content p {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
-	.hero-button {
+	.hero-cta {
 		padding: 12px 25px;
 		font-size: 14px;
 	}
 }
 
 @media (max-width: 480px) {
-	.hero-section {
-		height: 50vh;
-		padding: 0 20px;
-	}
-
 	.hero-content h1 {
 		font-size: 28px;
 	}
 
 	.hero-content p {
-		font-size: 14px;
-		margin-bottom: 20px;
+		font-size: 16px;
 	}
 
-	.hero-button {
+	.hero-cta {
 		padding: 10px 20px;
 		font-size: 12px;
 	}

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 import AllProducts from "./components/AllProducts";
 import GetInTouch from "./components/GetInTouch";
+import ProductDetails from "./components/ProductDetails";
 
 const App: React.FC = () => {
 	return (
@@ -33,6 +34,7 @@ const App: React.FC = () => {
 					<Route path="/products" element={<ProductsSection />} />
 					<Route path="/contact" element={<ContactSection />} />
 					<Route path="/all-products" element={<AllProducts />} />
+					<Route path="/product/:id" element={<ProductDetails />} />
 					<Route path="/get-in-touch" element={<GetInTouch />} />
 				</Routes>
 			</div>
