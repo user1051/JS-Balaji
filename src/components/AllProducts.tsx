@@ -40,6 +40,7 @@ const AllProducts: React.FC = () => {
 					</div>
 				</div>
 			))}
+			<h3>And Many More...</h3>
 		</section>
 	);
 };

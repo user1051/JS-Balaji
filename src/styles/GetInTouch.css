@@ -43,10 +43,10 @@
 
 .form-group {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
-.form-group label {
+/* .form-group label {
 	position: absolute;
 	top: 12px;
 	left: 15px;
@@ -54,7 +54,7 @@
 	color: var(--gray);
 	transition: all 0.3s ease;
 	pointer-events: none;
-}
+} */
 
 .form-group input,
 .form-group textarea {

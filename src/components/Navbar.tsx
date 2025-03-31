@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import LOGO from "../assets/images/LOGO.png";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,13 @@ const Navbar: React.FC = () => {
 		<nav className="navbar">
 			<div className="navbar-logo">
 				{/* <h2>JS Balaji Pack Tech</h2> */}
-				<img src={LOGO} alt="" style={{ width: 200, height: 50 }} />
+				<Link to="/">
+					<img
+						src={LOGO}
+						alt=""
+						style={{ width: 250, height: 60, cursor: "pointer" }}
+					/>
+				</Link>
 			</div>
 			<div
 				className={`navbar-toggle ${isOpen ? "open" : ""}`}

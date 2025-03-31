@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/GetInTouch.css";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, TextField } from "@mui/material";
 
 interface FormData {
 	name: string;
@@ -70,15 +70,16 @@ const GetInTouch: React.FC = () => {
 		// EmailJS configuration
 		emailjs
 			.send(
-				"service_aaxxvg4", // Replace with your EmailJS Service ID
-				"template_e3fk3m6", // Replace with your EmailJS Template ID
+				process.env.REACT_APP_SERVICE_KEY, // Replace with your EmailJS Service ID
+				process.env.REACT_APP_TEMPLATE_KEY, // Replace with your EmailJS Template ID
+
 				{
 					name: formData.name,
 					email: formData.email,
 					mobile: formData.mobile,
 					title: formData.message,
 				},
-				"xNsHoyWWQetIh6D84" // Replace with your EmailJS Public Key
+				process.env.REACT_APP_PUBLIC_KEY // Replace with your EmailJS Public Key
 			)
 			.then(
 				(result: EmailJSResponse) => {

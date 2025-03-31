@@ -48,8 +48,8 @@ const ProductsSection: React.FC = () => {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
-		centerMode: true, // Center mode enable karo
-		centerPadding: "20px", // Cards ke beech gap ke liye
+		centerMode: true,
+		centerPadding: "20px",
 		responsive: [
 			{
 				breakpoint: 1024,
